@@ -111,7 +111,7 @@ class DiscordRpc
 @:build(linc.Linc.touch())
 @:build(linc.Linc.xml('discord_rpc'))
 #end
-private extern class DiscordRpcExterns
+class DiscordRpcExterns
 {
     private static function _init(_clientID : String, _steamAppID : String, _onReady : VoidCallback, _onDisconnected : ErrorCallback, _onError : ErrorCallback, _onJoin : SecretCallback, _onSpectate : SecretCallback, _onRequest : RequestCallback) : Void;
     static inline function init(_clientID : String, ?_steamAppID : String) : Void
@@ -162,7 +162,7 @@ private extern class DiscordRpcExterns
 @:native('DiscordJoinRequest')
 @:structAccess
 @:unreflective
-extern class JoinRequest
+class JoinRequest
 {
     public var userId : String;
     public var username : String;
